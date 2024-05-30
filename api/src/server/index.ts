@@ -1,7 +1,3 @@
-import express from 'express'
+import { setupApp } from "./config/app";
 
-const app = express()
-
-app.listen(4000, () => {
-  console.log('Server listening on port 4000')
-})
+setupApp(4000)
