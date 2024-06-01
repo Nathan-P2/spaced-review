@@ -3,6 +3,6 @@ import { Router } from "express";
 
 const router = Router();
 
-router.use(cardsRoutes(router))
+router.use(cardsRoutes())
 
 export default router
