@@ -11,8 +11,6 @@ class CreateCardUseCase {
   }
 
   async handle(card: Card) {
-    // this.cardRepository.createCard(card)
-    console.log('oiee')
     await this.cardRepository.createCardMongo(card)
   }
 }

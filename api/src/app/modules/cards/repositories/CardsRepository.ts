@@ -20,7 +20,6 @@ class CardsRepository implements CardsRepositoryInterface {
   }
 
   async createCardMongo(card: Card) {
-    console.log(card)
     await cardSchema.create(card)
   }
 }

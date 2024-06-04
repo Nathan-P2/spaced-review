@@ -9,6 +9,6 @@ export const setupApp = async (port: number): Promise<Express> => {
   app.listen(port, () => {
     console.log(`Server started on port ${port}`)
   })
-  mongoose.connect('mongodb+srv://neite:CcOWZZXP0kr9Modx@teste.pbymplg.mongodb.net/?retryWrites=true&w=majority&appName=Teste')
+  mongoose.connect('mongodb+srv://neite:CcOWZZXP0kr9Modx@teste.pbymplg.mongodb.net/?retryWrites=true&w=majority&appName=Teste&document=')
   return app
 }

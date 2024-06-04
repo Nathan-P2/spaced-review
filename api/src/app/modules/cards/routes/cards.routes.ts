@@ -5,7 +5,7 @@ import { CreateCardController } from "../controllers/CreateCardController";
 export default (): Router => {
   const router = Router();
 
-  router.get('/createCard', adaptRoute(new CreateCardController()))
+  router.post('/createCard', adaptRoute(new CreateCardController()))
 
   return router
 }
