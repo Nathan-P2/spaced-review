@@ -6,9 +6,10 @@ export function provideDatabaseConnection(): DataBaseConnection {
   const options: Options = {
     port: 3306,
     host: 'localhost',
-    username: '',
-    password: '',
-    database: 'mysql'
+    username: 'root',
+    password: '123',
+    database: 'teste',
+    dialect: 'mysql'
   } 
   const connection = new SequelizeConnection(options)
   connection.connect()

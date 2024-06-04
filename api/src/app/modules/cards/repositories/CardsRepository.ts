@@ -1,6 +1,7 @@
 import DataBaseConnection from "@src/app/infra/database/DataBaseConnectionInterface";
 import { Card } from "../models/Card";
 import { CardsRepositoryInterface } from "./Interfaces/CardsRepositoryInterface";
+import cardSchema from "../../models/card.model";
 
 
 class CardsRepository implements CardsRepositoryInterface {
@@ -16,6 +17,11 @@ class CardsRepository implements CardsRepositoryInterface {
     const cardResponse: Card = await this.connection.executeQuery(query)
 
     return cardResponse;
+  }
+
+  async createCardMongo(card: Card) {
+    console.log(card)
+    await cardSchema.create(card)
   }
 }
 
