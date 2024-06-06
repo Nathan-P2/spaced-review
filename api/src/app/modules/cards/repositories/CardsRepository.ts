@@ -19,6 +19,14 @@ class CardsRepository implements CardsRepositoryInterface {
     return cardResponse;
   }
 
+  async listCards(): Promise<Card[]> {
+    const query = 'SELECT * FROM cards'
+
+    const cardResponse: Card[] = await this.connection.executeQuery(query)
+
+    return cardResponse
+  }
+
   async createCardMongo(card: Card) {
     await cardSchema.create(card)
   }
