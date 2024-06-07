@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "ts-node-dev --respawn --transpile-only -r tsconfig-paths/register src/server/index.ts"
+    "dev": "ts-node-dev --respawn --transpile-only -r tsconfig-paths/register src/server/index.ts",
+    "build": "tsc && tsc-alias",
+    "start": "node ./dist/server/index.js"
   },
   "author": "",
   "license": "ISC",
@@ -16,7 +18,8 @@
     "mysql2": "^3.10.0",
     "nodemon": "^3.1.0",
     "sequelize": "^6.37.3",
-    "sqlite3": "^5.1.7"
+    "sqlite3": "^5.1.7",
+    "tsc-alias": "^1.8.10"
   },
   "devDependencies": {
     "@eslint/js": "^9.3.0",
