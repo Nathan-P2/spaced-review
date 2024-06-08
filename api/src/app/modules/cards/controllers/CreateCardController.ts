@@ -8,23 +8,17 @@ export class CreateCardController implements Controller {
   async handle(req: CreateCardController.Request): Promise<HttpResponse> {
     const createCardUseCase = new CreateCardUseCase();
 
-    await createCardUseCase.handle({
-      cardDescription: 'teste',
-      cardTitle: 'teste'
-    })
+    const response = await createCardUseCase.handle({ cardDescription: req.body.cardDescription, cardTitle: req.body.cardTitle })
 
-    return {
-      statusCode: 200,
-      body: {
-        message: 'successfully created'
-      }
-    }
+    return response
   }
 }
 
 export namespace CreateCardController {
   export type Request = {
-    cardTitle: string;
-    cardDescription: string;
+    body: {
+      cardTitle: string;
+      cardDescription: string;
+    }
   }
 }
