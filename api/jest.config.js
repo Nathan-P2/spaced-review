@@ -9,5 +9,8 @@ module.exports = {
   ],
   testPathIgnorePatterns: ['<rootDir>/node_modules'],
   coverageReporters: ['json', 'html'],
-  testMatch: ['<rootDir>/src/**/*.spec.ts']
+  testMatch: ['<rootDir>/src/**/*.spec.ts'],
+  moduleNameMapper: {
+    '^@src/(.*)': '<rootDir>/src/$1'
+  }
 };

@@ -1,9 +1,10 @@
-import { provideDatabaseConnection } from "@src/app/infra/database/DataBaseHelper";
+import { provideDatabaseConnection } from "../../../infra/database/DataBaseHelper";
 import CardsRepository from "../repositories/CardsRepository";
 import { Card } from "../models/Card";
-import { HttpResponse } from "@src/app/presentation/protocols/http";
+import { HttpResponse } from "../../../../app/presentation/protocols/http";
+import { ICreateCardInterface } from "./interfaces/ICreateCardUseCase";
 
-class CreateCardUseCase {
+class CreateCardUseCase implements ICreateCardInterface {
   private cardRepository: CardsRepository;
 
   constructor() {
