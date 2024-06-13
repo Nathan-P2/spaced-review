@@ -1,6 +1,7 @@
 export type HttpResponse = {
   statusCode: number
-  body: any
+  message: string,
+  body?: any
 }
 
 export type HttpRequest = {
