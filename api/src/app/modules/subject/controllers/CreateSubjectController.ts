@@ -1,7 +1,7 @@
 import { HttpResponse } from '../../../../app/presentation/protocols/http'
 import { Controller } from '../../../presentation/protocols/controller'
 import { CreateSubjectDTO } from '../../../../app/domain/dtos/createSubjectDTO'
-import { badRequest } from '../../../../app/errors/badrequest'
+import { badRequest, ok } from '../../../helpers/http-status'
 
 export class CreateSubjectController implements Controller {
   constructor() {}
@@ -15,9 +15,6 @@ export class CreateSubjectController implements Controller {
       return badRequest(new Error('The quantity of hours must be 36 or 72'))
     }
 
-    return {
-      statusCode: 200,
-      message: 'Created successfully'
-    }
+    return ok('Created successfully', null)
   }
 }
