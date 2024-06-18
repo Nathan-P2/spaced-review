@@ -3,7 +3,9 @@ import { ok } from "@src/app/helpers/http-status";
 import { HttpResponse } from "@src/app/presentation/protocols/http";
 
 export class CreateSubjectUseCase {
-  async handle(subject: Subject): Promise<HttpResponse> {
-    return ok('Subject created successfully')
+  async handle({ subjectName, subjectQuantityOfHours }: Subject): Promise<HttpResponse> {
+    
+    
+    return ok('Subject created successfully', {subjectName, subjectQuantityOfHours})
   }
 }
