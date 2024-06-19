@@ -1,4 +1,4 @@
-import { CreateSubjectDTO } from "@src/app/domain/dtos/createSubjectDTO"
+import { CreateSubjectDTO } from "../../../domain/dtos/CreateSubjectDTO"
 import { CreateSubjectController } from "../controllers/CreateSubjectController"
 
 describe('CreateSubject context', () => {
