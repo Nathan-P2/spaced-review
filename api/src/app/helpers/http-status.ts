@@ -7,14 +7,14 @@ export const badRequest = (error: Error): HttpResponse => {
   }
 }
 
-export const notFount = (error: Error): HttpResponse => {
+export const notFound = (error: Error): HttpResponse => {
   return {
     statusCode: 404,
     message: error.message
   }
 }
 
-export const ok = (message: string, data: any): HttpResponse => {
+export const ok = (message: string, data: object): HttpResponse => {
   return {
     statusCode: 200,
     message: message,
