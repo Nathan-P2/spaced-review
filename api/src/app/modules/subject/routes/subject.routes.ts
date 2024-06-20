@@ -1,10 +1,8 @@
 import { Router } from "express";
-import { CreateSubjectController } from "../controllers/CreateSubjectController";
+import { makeCreateSubjectController } from "../../factories/controllers/create-subject-controller-factory";
 
 const subjectRouter = Router()
 
-const controllerObject = new CreateSubjectController
-
-subjectRouter.post('/subject', controllerObject.handle)
+subjectRouter.post('/subject', makeCreateSubjectController().handle)
 
 export default subjectRouter
